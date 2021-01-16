@@ -12,6 +12,12 @@ output use-snapshot {
   value       = var.use-snapshot
 }
 
-output my-website-address {
+output my-lb-address {
   value       = "${aws_lb.my-alb.dns_name}:${var.my-port-app1}"
+}
+
+# 05a-lb-alb.tf ----------------------------------------------------------
+output my-website-address {
+  description          = "Full website addresss including port number"
+  value                = "${aws_route53_record.my-r53-record.fqdn}:${var.my-port-app1}"
 }

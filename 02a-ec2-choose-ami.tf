@@ -34,6 +34,8 @@ resource "aws_instance" "my-server" {
   instance_type          = var.my-instance-type
   subnet_id              = module.my-vpc.private_subnets[count.index % length(module.my-vpc.private_subnets)]
   vpc_security_group_ids = [aws_security_group.my-sg-server1.id]
+  associate_public_ip_address = true
+  key_name               = "my-kp-${var.my-aws-region}"
   # user_data              = data.template_file.my-template-file.rendered
   tags = {
     Name                 = "${var.my-servername}-0${count.index+1}" 

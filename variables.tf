@@ -131,6 +131,19 @@ variable "my-port-app1" {
 }
 
 
+# 06a-route53.tf -----------------------------------------------------------
+variable "my-existing-r53-zone" {
+    default             = "redacted.com"    # this variable should point to an exiting r53 hosted zone
+}
+
+variable "my-lb-hosted-zone" {
+    default             = "ZHREDACTEDK8"
+} 
+
+# variable "my-application" {
+#     default             = "my-app"
+# } 
+
 
 # 09a-sg-rules -------------------------------------------------------------
 variable "use-snapshot" {
