@@ -37,6 +37,7 @@ resource "aws_instance" "my-server" {
   associate_public_ip_address = true
   key_name               = "my-kp-${var.my-aws-region}"
   # user_data              = data.template_file.my-template-file.rendered
+
   tags = {
     Name                 = "${var.my-servername}-0${count.index+1}" 
     Project              = var.my-project-name

@@ -1,3 +1,9 @@
+variable "my-region-name" {
+  description           = "The AWS region things are created in"
+  default               = "London"
+}
+
+
 # main.tf -------------------------------------------------------------
 variable "my-aws-region" {
   description           = "The AWS region things are created in"
@@ -40,6 +46,7 @@ variable my-priv-subnet-cidr-blocks {
     "10.0.16.0/24"
   ]
 }
+
 
 variable my-pub-subnets-per-vpc {
   description           = "Number of public subnets. Maximum of 16."
@@ -87,6 +94,11 @@ variable my-servername {
     default = "jenkins"
 }
 
+
+# 2d-nic-and-eip.tf -------------------------------------------------------------
+variable "my-existing-eip" {
+    default = "my-default-eip"
+}
 
 # various ----------------------------------------------------------------
 variable my-project-name {
