@@ -21,3 +21,7 @@ output my-website-address {
   description          = "Full website addresss including port number"
   value                = "${aws_route53_record.my-r53-record.fqdn}:${var.my-port-app1}"
 }
+
+output my-servername2 {
+  value       = "ssh bitnami@${var.my-servername}-01} -i ${var.my-private-key}.pem"
+}

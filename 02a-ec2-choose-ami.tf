@@ -29,13 +29,14 @@ locals {
 
 
 resource "aws_instance" "my-server" {
-  count                  = local.instance-count
-  ami                    = lookup(local.ami-mapping, var.use-snapshot, "This option should never get chosen")
-  instance_type          = var.my-instance-type
-  subnet_id              = module.my-vpc.private_subnets[count.index % length(module.my-vpc.private_subnets)]
-  vpc_security_group_ids = [aws_security_group.my-sg-server1.id]
+  count                       = local.instance-count
+  ami                         = lookup(local.ami-mapping, var.use-snapshot, "This option should never get chosen")
+  instance_type               = var.my-instance-type
+  # subnet_id                 = module.my-vpc.private_subnets[count.index % length(module.my-vpc.private_subnets)]
+  subnet_id                   = module.my-vpc.public_subnets[count.index % length(module.my-vpc.public_subnets)]
+  vpc_security_group_ids      = [aws_security_group.my-sg-server1.id]
   associate_public_ip_address = true
-  key_name               = "my-kp-${var.my-aws-region}"
+  key_name                    = var.my-private-key
   # user_data              = data.template_file.my-template-file.rendered
 
   tags = {

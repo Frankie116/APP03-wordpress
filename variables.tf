@@ -100,6 +100,14 @@ variable "my-existing-eip" {
     default = "my-default-eip"
 }
 
+# 2e-keypair.tf -------------------------------------------------------------
+variable "my-private-key" {
+    default = "my-priv-keyname"
+}
+variable "my-public-key" {
+    default = "ssh-rsa REDACTED-AAAABBBBBBCCCCCC"
+}
+
 # various ----------------------------------------------------------------
 variable my-project-name {
   description           = "Name of the project. Used in resource names and tags."
