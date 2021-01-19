@@ -14,3 +14,14 @@ Changelog-002
 
 Untracked files:
         06a-route53.tf
+
+
+Changelog-003
+        modified:   02a-ec2-choose-ami.tf
+        modified:   04b-sg-rules-server.tf
+        modified:   changelog.md
+        modified:   outputs.tf
+        modified:   variables.tf
+
+Untracked files:
+        02e-keypair.tf
