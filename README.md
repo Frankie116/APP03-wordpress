@@ -1,5 +1,6 @@
 ----------------------------------------------------------------------------
-#  Project: APP03-wordpress
+
+##  Project: APP03-wordpress
 
 Purpose: To create a terraform run that will build a wordpress website on a single
 
