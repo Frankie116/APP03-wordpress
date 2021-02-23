@@ -23,5 +23,8 @@ Changelog-003
         modified:   outputs.tf
         modified:   variables.tf
 
-Untracked files:
+        Untracked files:
         02e-keypair.tf
+
+Changelog-004
+        removed scrap directory
