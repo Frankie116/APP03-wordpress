@@ -1,11 +1,13 @@
-## ----------------------------------------------------------------------------
-# version  3.0
+----------------------------------------------------------------------------
 #  Project: TF-TF-ec2-snapshot-or-amazon-ami
-## Purpose: To create a terraform run that will build an ec2 instance using
-## either a pre-existing snapshot or a standard amazon linux ami.
-## User will be prompted for option at TF launch.
-   Author:  Frank Effrim-Botchey
-## ----------------------------------------------------------------------------
+
+Purpose: To create a terraform run that will build a wordpress website on a single
+
+EC2 instance.  The EC2 will use a golden ami with wordpress pre-installed.
+
+Author:  Frank Effrim-Botchey
+
+----------------------------------------------------------------------------
 
 
 ## modules:
